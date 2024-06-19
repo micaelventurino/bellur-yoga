@@ -5,48 +5,77 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>clases</title>
         <link rel="shortcut icon" href="../img/images.png" type="image/x-icon">
+
+        <!--Enlace Bootstrap-->
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+         
+        <!--Enlace CSS-->
         <link rel="stylesheet" href="../css/main.css">
     </head>
     <body>
+
         <header class="header">
-            <a href="../index.html"><img src="../img/images prueba.png" class="logo-inicio" alt="pose de yoga" ></a>
-            <nav>
-                <ul class="menu-nav">
-                   <li><a class="links" href="../index.html">Inicio</a></li>
-                   <li><a class="links" href="./nosotros.html">Nosotros</a></li>
-                   <li><a class="links" href="./clases.html">Clases</a></li>
-                   <li><a class="links" href="./horarios.html">Horarios</a></li>
-                   <li><a class="links" href="./contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+         <div class="container-fluid container-center">  
+            <nav class="navbar navbar-expand-lg navbar-dark container">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="../index.html"><img src="../img/images.png" class="logo-inicio" alt="pose de yoga" ></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link active" class="links" href="../index.html">Inicio</a></li>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" class="links" href="./nosotros.html">Nosotros</a></li>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" class="links" href="./clases.html">Clases</a></li>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" class="links" href="./horarios.html">Horarios</a></li>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" class="links" href="./contacto.html">Contacto</a></li>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+         </div>  
+
         </header>
 
         <main class="fondo-main-clases">
-            <section>
-            <h2 class="h2-clases">Clases grupales de Yoga</h2>
-            <h3 class="h3-clases">A continuación dejamos los estilos de yoga que se practican en la escuela, con videos de ejemplo:</h3>
-            </section>
-
-            <section class="prueba-123">
+            
+              <h2 class="h2-clases">Clases grupales de Yoga</h2>
+            
+            <section class="grid-container-clases">
                 <div class="div-clases">
-                   <p>Yoga suave: para principiantes mayores de 60 años</p>
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/vBXWOUXb_5g?si=4e4C6Imzr3LIClPC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p class="p-video-clases">Yoga suave: <br> para principiantes mayores de 60 años</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vBXWOUXb_5g?si=4e4C6Imzr3LIClPC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div class="div-clases">
-                    <p>Yoga intermedio: para principiantes menores de 60 años</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/B9auH02U0tc?si=DFgoHNNClQpPI9vO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                 </div>
-                 <div class="div-clases">
-                    <p>Yoga fuerte: clase avanzada para personas con experiencia</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_2QqiSwfc10?si=kUbGebMSqAXa4MMy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                 </div>
-            </section>
-
-            <section>
+                        <p class="p-video-clases">Yoga intermedio: <br> para principiantes menores de 60 años</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/B9auH02U0tc?si=DFgoHNNClQpPI9vO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="div-clases">
+                        <p class="p-video-clases">Yoga fuerte: <br> clase avanzada para personas con experiencia</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_2QqiSwfc10?si=kUbGebMSqAXa4MMy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="div-clases">
+                        <p class="p-video-clases">Yoga Kurunta: <br> para avanzar en posturas</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lx6LaiQ_o08?si=Cq14TKqdZ60uHBR-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </section>
         </main>
+
         <footer>
             <p class="texto-footer">Bellur Yoga - Todos los derechos reservados</p>
         </footer>
+
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
     </body>
 </html>
