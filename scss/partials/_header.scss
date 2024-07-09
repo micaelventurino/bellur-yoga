@@ -1,0 +1,13 @@
+/**********************************************/
+/******************* HEADER *******************/
+.header{
+    background-color: rgb(10, 10, 10);
+    padding: 1.5rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .logo-inicio{
+        width: 8.5rem;
+    }
+}
