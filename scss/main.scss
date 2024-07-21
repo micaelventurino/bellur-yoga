@@ -14,6 +14,7 @@
 
 /***********************************************/
 /******************** INDEX ********************/
+/***********************************************/
 .hero{
     background-image: url("../img/aprender-a-meditar_1024.jpg");
     background-size: cover;
@@ -60,9 +61,9 @@
         }
     }
 
-  /***************
+/***************
       GALERIA
-  ****************/
+****************/
  .gallery {
     max-width: 950px;
     margin: 70px auto;
@@ -115,10 +116,9 @@
     }
  }
 
-/*#######################
-         OVERLAY
-#######################*/       
-
+/*#################
+      OVERLAY
+###################*/       
 .gallery__overlays {
     position: absolute;
     @include flex(center, center);
@@ -144,8 +144,10 @@
 }
 
 
+
 /************************************************/
 /******************* NOSOTROS *******************/
+/***********************************************/
 .nosotros-fondo{
     background-image: url("../img/aprender-a-meditar_1024.jpg");
     background-attachment: fixed;
@@ -172,8 +174,10 @@
 }
 
 
+
 /**********************************************/
 /******************* CLASES ********************/
+/***********************************************/
 .fondo-main-clases{
     background-image: url("../img/aprender-a-meditar_1024.jpg");
     background-attachment: fixed;
@@ -235,8 +239,10 @@
 }
 
 
+
 /************************************************/
 /******************* HORARIOS *******************/
+/***********************************************/
 .horarios-main{
     background-image: url("../img/aprender-a-meditar_1024.jpg");
     background-attachment: fixed;
@@ -256,8 +262,10 @@
 }
 
 
+
 /**********************************************
 ******************* CONTACTO ******************/
+/***********************************************/
 .contacto-main{
     background-image: url("../img/aprender-a-meditar_1024.jpg");
     background-attachment: fixed;
@@ -280,13 +288,49 @@
             }
             .contacto-lista {
                 list-style-type: none;
-
-                
-                    .logos-contacto {
-                        width: 1rem;
-                    }
             }
-    }  
+
+            .fa-whatsapp{
+                text-decoration: none;
+                font-size: 20px;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                background: #314652;
+                color: #f1f1f1;
+                border-radius: 50%;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+                margin-bottom: 10px;      
+                &:hover {
+                    background-color: rgb(16, 161, 40);
+                }
+            }
+
+            .fa-instagram{
+                @extend .fa-whatsapp;
+
+                &:hover {
+                    background-color: rgb(126, 33, 76);
+                } 
+            }  
+
+            .fa-envelope{
+                @extend .fa-whatsapp;
+
+                &:hover {
+                    background-color: rgb(30, 61, 199);
+                } 
+            }   
+       
+            .fa-map-pin{
+                @extend .fa-whatsapp;
+
+                &:hover {
+                    background-color: rgb(214, 216, 97);
+                } 
+            }              
+   }
    
 
     .section-contacto-2 {
