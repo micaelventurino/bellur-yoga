@@ -4,6 +4,14 @@
 @import "./partials/footer";
 
 
+/****** MIXIN ******/
+@mixin flex($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
 /***********************************************/
 /******************** INDEX ********************/
 .hero{
@@ -11,34 +19,23 @@
     background-size: cover;
     background-attachment: fixed;
     min-height: 100vh;
-    display: flex;
+    @include flex(center, center);
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
 
      .section-main{
         padding: 1rem;
-        justify-content: center;
-        align-items: center;
+        margin-top: 2rem;
   
             .div-main{ 
-                
-                display: flex;
+                @include flex(center, center);
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
                 text-align: center;
-                padding: 0.5rem;
-                background-color: rgba(255, 255, 255, 0.2);
+                padding: 1rem;
+                background-color: rgba(255, 255, 255, 0.4);
                 border-radius: 10px;
-
-                .h1-hero {
-                    font-size: 3.2rem;
-                }
     
                 .p-index{
-                    /* width: 50%;*/
                      font-style: italic;
                      font-size: 1.4rem;
                      padding: 1rem;
@@ -47,8 +44,7 @@
                  }
     
                  .p-nombre-index{
-                    font-size: 1.6rem;
-                    margin: 0;
+                    font-size: 1.8rem;
                 }
     
                 .btn-link {
@@ -64,10 +60,9 @@
         }
     }
 
-    /*********************************************/
-    /*********************
+  /***************
       GALERIA
-*********************/
+  ****************/
  .gallery {
     max-width: 950px;
     margin: 70px auto;
@@ -77,49 +72,56 @@
     justify-self: center;
     justify-content: center;
     gap: 1rem;
+
+    .cajas-main{
+        background-color: black;
+        border-radius: 10px;
+    }
   
-  }
   
-  .gallery__item {
+    .gallery__item {
       background-color: rgb(40, 82, 83);
       position: relative;
-      overflow: hidden; /*si el contenido se desborda se oculta*/
-  }
-  
-  .gallery__img{
-     width: 100%;
-     height: 100%;
-     object-fit: cover; /*para acomodar imagenes en su contenedor si es que desbordan*/
-  }
-  
-  .gallery__item--1 {
-      grid-column: span 2; 
-  }
-  
-  .gallery__item--2 {
-    grid-column: span 2; 
-}
+      overflow: hidden;
+      grid-column: span 1; 
 
-@media (max-width: 390px) {
-    .gallery__item {
-      width: 100%;
-      max-width: 185px;
-      margin: 0 auto;
-      grid-template-columns: repeat(1fr);
+      .gallery__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       }
+
+       .btn-link {
+        text-decoration: none;
+        color: white;
+       }
     }
 
-}
+  
+    @media (max-width: 815px) {
+        .gallery__item {
+            grid-column: span 2;
+        }
 
+    }
 
-  /*######################################
-               OVERLAY
-######################################*/       
+    @media (max-width: 390px) {
+        .gallery__item {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+        }
+
+    }
+ }
+
+/*#######################
+         OVERLAY
+#######################*/       
 
 .gallery__overlays {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center);
     bottom: 0;
     left: 0;
     right: 0;
@@ -149,18 +151,23 @@
     background-attachment: fixed;
     min-height: 100vh;
     background-size: cover;
-    padding: 2rem;
-    display: flex;
+    padding: 1rem;
+    @include flex(center, center);
     flex-direction: column;
-    align-items: center;
     text-align: center;
 
     .container-nosotros {
         background-color: rgba(255, 255, 255, 0.4);
         color: black;
-        width: 80%; /* Ancho del contenedor ajustado */
-        max-width: 800px; /* Ancho máximo para evitar que se estire demasiado en pantallas grandes */
-        margin-bottom: 2rem; /* Espacio inferior entre secciones */
+        width: 100%;
+        max-width: 25rem; 
+        padding: 0.8rem; 
+        margin-bottom: 2rem;
+        border-radius: 10px;
+        
+        .h2-nosotros {
+            padding: 0.3rem;
+        }
     }
 }
 
@@ -177,7 +184,6 @@
 
     .h2-clases{
         display: flex;
-        font-size: 3rem;
         padding: 4rem;
         text-align: center;
         justify-content: center;
@@ -194,10 +200,8 @@
         gap: 1rem;
 
         .div-clases{ 
-            display: flex;
+            @include flex(center, center);
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
             text-align: center;
             padding: 0.5rem;
             border: 0.1rem solid black;
@@ -240,105 +244,14 @@
     background-size: cover;
     padding: 2rem;
 
-    .section-horarios{
-        padding: 2rem;
-        overflow-x: auto;
+    .h2-horarios{
+        @include flex(center, center);
+        padding: 4rem;
+    }
 
-        .tabla-horarios {
-            width: 100%;
-            border-collapse: collapse; 
-            background-color: rgba(255, 255, 255, 0.7);
-            white-space: nowrap;
-
-            
-            .horario, .dia {
-                background-color: rgba(255, 255, 255, 0.7);;
-                border: 1px solid black;
-                padding: 8px;
-                text-align: center;
-                font-weight: bold;
-                min-width: 120px; 
-
-            }
-
-            .clases{
-                background-color: rgba(255, 255, 255, 0.7);
-                border: 1px solid black;
-                padding: 8px;
-                text-align: center;
-            }
-        }
-        
-            /*### RESPONSIVE ###*/
-            @media (max-width: 940px) {
-                .tabla-horarios {
-                    overflow-y: hidden; /* Oculta el scroll vertical en pantallas pequeñas */
-                }
-                
-                .tabla-horarios thead,
-                .tabla-horarios tbody,
-                .tabla-horarios th,
-                .tabla-horarios td,
-                .tabla-horarios tr {
-                    display: block;
-                }
-                
-                .tabla-horarios tbody tr:nth-child(even) {
-                    background-color: rgba(255, 255, 255, 0.5); /* Añade un fondo semitransparente a las filas alternas */
-                }
-                
-                .tabla-horarios thead {
-                    position: absolute;
-                    top: -9999px;
-                    left: -9999px;
-                }
-                
-                .tabla-horarios tr {
-                    margin-bottom: 15px;
-                }
-                
-                .tabla-horarios td {
-                    border: none;
-                    border-bottom: 1px solid #eee;
-                    position: relative;
-                    padding-left: 50%;
-                    text-align: left;
-                }
-                
-                .tabla-horarios td:before {
-                    position: absolute;
-                    top: 6px;
-                    left: 6px;
-                    width: 45%;
-                    padding-right: 10px;
-                    white-space: nowrap;
-                    font-weight: bold; 
-                }
-                
-                .tabla-horarios td:nth-of-type(1):before {
-                    content: "Horario";
-                }
-                
-                .tabla-horarios td:nth-of-type(2):before {
-                    content: "Lunes";
-                }
-                
-                .tabla-horarios td:nth-of-type(3):before {
-                    content: "Martes";
-                }
-                
-                .tabla-horarios td:nth-of-type(4):before {
-                    content: "Miércoles";
-                }
-                
-                .tabla-horarios td:nth-of-type(5):before {
-                    content: "Jueves";
-                }
-                
-                .tabla-horarios td:nth-of-type(6):before {
-                    content: "Viernes";
-            }
-        }
+    .horarios-negrita{
+        font-weight: bold;
+        font-size: 1.2rem;
     }
 }
 
@@ -351,18 +264,15 @@
     min-height: 100vh;
     background-size: cover;
     padding: 2rem;
-    display: flex;
+    @include flex(center, center);
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     .section-contacto {
         background-color: rgba(255, 255, 255, 0.4);
         max-width: 25rem; 
-        padding: 1rem; 
-        margin-bottom: 1rem;
-        border: 0.25rem solid black;
-        border-radius: 16px;
+        padding: 0.5rem; 
+        margin-bottom: 2rem;
+        border-radius: 10px;
         
 
             .h2-contacto{
@@ -378,16 +288,15 @@
             }
     }  
    
-    
-.section-2-contacto {
-    background-color: rgba(255, 255, 255, 0.4);
-    max-width: 25rem;
-    border: 0.25rem solid black;
-    border-radius: 16px;
-    padding: 1rem;
 
-    .detalle-de-consulta{
-        display: flex;
+    .section-contacto-2 {
+        background-color: rgba(255, 255, 255, 0.4);
+        max-width: 25rem;
+        border-radius: 10px;
+        padding: 1rem;
+
+        .h2-contacto{
+            text-align: center;
+        }
     }
-  }
 }

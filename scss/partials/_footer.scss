@@ -2,16 +2,50 @@
 /******************* FOOTER *******************/
 footer{
     /* padding-top: 10px;*/
-     background-color: black;
-     color: white;
+     background-color: rgb(0, 0, 0);
      text-align: center;
      padding: 1rem;
-     position: relative;
-   /*  bottom: 0;*/
-     width: 100%;
      
-     .texto-footer{
+    .texto-footer{
          font-size: 0.6rem;
-     }
- }
- 
+         color: white;
+         margin-top: 1rem;
+    }
+
+     
+    .fa-whatsapp{
+      text-decoration: none;
+      font-size: 28px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: #314652;
+      color: #f1f1f1;
+      border-radius: 50%;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  
+      &:hover {
+          background-color: rgb(16, 161, 40);
+      }
+    }
+    
+    
+    .fa-instagram{
+      @extend .fa-whatsapp;
+
+      &:hover {
+        background-color: rgb(126, 33, 76);
+      } 
+    }
+
+
+    .fa-youtube{
+      @extend .fa-whatsapp;
+
+      &:hover {
+        background-color: red
+      }
+    }
+
+  }
